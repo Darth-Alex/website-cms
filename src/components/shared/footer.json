@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_footers",
+  "info": {
+    "displayName": "Footer",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "Telephone": {
+      "type": "string"
+    },
+    "Copyright": {
+      "type": "string"
+    },
+    "Links": {
+      "type": "component",
+      "component": "shared.nav-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
