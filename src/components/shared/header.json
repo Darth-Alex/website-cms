@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_headers",
+  "info": {
+    "displayName": "Header",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Links": {
+      "type": "component",
+      "component": "shared.nav-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

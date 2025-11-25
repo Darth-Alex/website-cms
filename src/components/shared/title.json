@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_titles",
+  "info": {
+    "displayName": "Title",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    },
+    "TextColor": {
+      "type": "enumeration",
+      "enum": [
+        "black",
+        "red",
+        "blue"
+      ]
+    }
+  },
+  "config": {}
+}

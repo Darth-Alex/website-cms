@@ -25,6 +25,19 @@ export interface SharedFooter extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHeader extends Struct.ComponentSchema {
+  collectionName: 'components_shared_headers';
+  info: {
+    displayName: 'Header';
+    icon: 'archive';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Links: Schema.Attribute.Component<'shared.nav-link', true>;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedNavLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_nav_links';
   info: {
@@ -37,12 +50,26 @@ export interface SharedNavLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTitle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_titles';
+  info: {
+    displayName: 'Title';
+    icon: 'play';
+  };
+  attributes: {
+    Text: Schema.Attribute.String;
+    TextColor: Schema.Attribute.Enumeration<['black', 'red', 'blue']>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.block': SharedBlock;
       'shared.footer': SharedFooter;
+      'shared.header': SharedHeader;
       'shared.nav-link': SharedNavLink;
+      'shared.title': SharedTitle;
     }
   }
 }
